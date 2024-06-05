@@ -2,11 +2,13 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
+/* HEADER AND HAMBURGER MENU */
+
 header {
-    background-color: 	#b45d3f;
+    background-color: #b77960;
 }
 
 .nav-branding img {
@@ -85,7 +87,7 @@ a {
         top: 70px;
         gap: 0;
         flex-direction: column;
-        background-color: #b45d3f;
+        background-color: #b77960;
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -98,4 +100,59 @@ a {
     .nav-menu.active {
         left: 0;
     }
+}
+
+/* HERO SECTION */
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f7f7f7;
+
+    /* DESKTOP */
+    @media (min-width: 1155px) { 
+        flex-direction: row-reverse;
+    }
+
+     /* MOBILE */
+    @media (max-width: 1154px) {
+        flex-direction: column;
+    }
+}
+
+.hero-text {
+    width: 100vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+     /* MOBILE */
+     @media (max-width: 1154px) {
+        padding: 50px 0px;
+    }
+}
+
+.hero-title {
+    font-size: 3rem;
+    
+} 
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    text-align: center;
+}
+
+
+.hero-image img {
+    /* DESKTOP */
+    @media (min-width: 1155px) {
+        height: 100%;
+    }
+
+     /* MOBILE */
+    @media (max-width: 1154px) {
+        width: 100vw;
+    } 
 }
