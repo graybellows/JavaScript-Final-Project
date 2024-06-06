@@ -6,11 +6,6 @@
 }
 
 /* HEADER AND HAMBURGER MENU */
-
-header {
-    background-color: #b77960;
-}
-
 .nav-branding img {
     width: 60px;
 }
@@ -25,11 +20,18 @@ a {
 }
 
 .navbar {
+    background-color: #b77960;
     min-height: 70px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 24px;
+    padding: 0 50px;
+
+    /* to make the navbar always visible */
+    position: fixed;
+    width: 100vw;
+    top: 0;
+    left: 0;
 }
 
 .nav-menu {
@@ -64,7 +66,8 @@ a {
 
 }
 
-@media (max-width: 768px) {
+/* MOBILE NAV */
+@media (max-width: 1154px) {
     .hamburger {
         display: block;
     }
@@ -109,10 +112,16 @@ a {
     align-items: center;
 
     background-color: #f7f7f7;
+    box-shadow: 0px 10px 10px 0px rgba(204,204,204,0.75);
+
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
 
     /* DESKTOP */
     @media (min-width: 1155px) { 
         flex-direction: row-reverse;
+        max-height: 585px; /* This is so that it's never bigger than the image */
     }
 
      /* MOBILE */
@@ -131,6 +140,7 @@ a {
      /* MOBILE */
      @media (max-width: 1154px) {
         padding: 50px 0px;
+        width: 100vw;
     }
 }
 
@@ -144,15 +154,95 @@ a {
     text-align: center;
 }
 
-
 .hero-image img {
+    border-bottom-right-radius: 5px;
+    border-bottom-left-radius: 5px;
+
     /* DESKTOP */
     @media (min-width: 1155px) {
         height: 100%;
     }
 
-     /* MOBILE */
+    /* MOBILE */
     @media (max-width: 1154px) {
         width: 100vw;
     } 
+}
+
+/* PAGE CARDS SECTION */
+.topics {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+
+    margin-left: 30px;
+    margin-right: 30px;
+
+    /* DESKTOP */
+    @media (min-width: 1155px) {
+        flex-direction: row;
+    }
+
+    /* MOBILE */
+    @media (max-width: 1154px) {
+        flex-direction: column;
+    } 
+}
+
+.topics-cards {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    background-color: #f7f7f7;
+    box-shadow: 10px 10px 10px 0px rgba(204,204,204,0.75);
+    border-radius: 5px;
+
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.topics-cards img {
+    width: 100%;
+    border-radius: 5px;
+}
+
+.topics-cards-text {
+    padding: 30px 0px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.topics-cards-text h3 {
+    font-size: 40px;
+}
+
+.topics-cards-text a {
+    font-weight: 500;
+    font-size: 25px;
+
+    background-color: #b77960;
+    padding: 15px;
+    box-shadow: 10px 10px 10px 0px rgba(204,204,204,0.75);
+    border-radius: 5px;
+}
+
+/* FOOTER */
+.footer {
+    min-height: 70px;
+    background-color: #b77960;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer p {
+    text-align: center;
+    font-weight: 600;
+    padding: 10px;
 }
